@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2'
-
+import DatePickerComponent from '../DatePickerComponent';
 export const Ganancia=()=> {
     const generarReporte = () => {
         Swal.fire(
@@ -10,7 +10,7 @@ export const Ganancia=()=> {
           }
    
     return (
-<div className="container mt-3">
+<div className="container ">
 <div className="card-header" align="center"><h1 >GANANCIA</h1></div>
     <div className="row  mt-5" align="center" >  
         <div className="col-6">
@@ -30,6 +30,13 @@ export const Ganancia=()=> {
                          <td ><input id="" type="text"  class="form-control-plaintext"  value="5"  /></td> 
                                     <td ><input id="" type="text"  class="form-control-plaintext"  value="Galleta oreo"/></td>
                                         <td ><input id="" type="text"  class="form-control-plaintext"  value="$ 150"/></td> 
+                                        
+                                       </tr>
+                                       <tr> <td id="">2</td>
+                         <td ><input id="" type="text"  class="form-control-plaintext"  value="5"  /></td> 
+                                    <td ><input id="" type="text"  class="form-control-plaintext"  value="Galleta Chispas"/></td>
+                                        <td ><input id="" type="text"  class="form-control-plaintext"  value="$ 150"/></td> 
+                                        
                                        </tr>
                         </tbody>
                       </table>  
@@ -38,17 +45,15 @@ export const Ganancia=()=> {
                         <h4>Total vendido</h4>
                         </div>
                         <div className="col-6" align="center" > 
-                      <input id="" type="text"  class="form-control"  value="$ 1200"/>
+                      <input id="" type="text"  class="form-control"  value="$ 300" readonly/>
                       </div>
                       </div>
 
         </div>
         <div className="col-6">
         <h3>Seleccion de fecha</h3>
-        <div class="md-form md-outline input-with-post-icon datepicker" id="prefill">
-        <input placeholder="Select date" type="text" id="prefill-example" class="form-control"/>
-            <i class="fas fa-calendar input-prefix"  ></i>
-        </div>
+        <DatePickerComponent></DatePickerComponent>
+       <br></br>
         <button  class='btn btn-success mt-5' name="btnGenerarReporte" id='' onClick={generarReporte} >Generar Reporte </button>
         </div>
     </div>

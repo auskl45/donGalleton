@@ -1,19 +1,34 @@
 export const Venta=()=> {
     return (
-    <div class="container">
+    <div className="container">
         <div className="card-header" align="center"><h1 >VENTA</h1></div>
-        <button type="button"  class="btn btn-primary">Ver galletas</button>
-        <div id="divContenido" class="col-12">
-            <div class="row mb-3">
-                <div class="col-7">
-                    <div class="row mb-3">
-                        <div class="col">
-                            <div id="divVentas" ></div>
-                        </div>
-                    </div>
+
+        <div id="divContenido" className="col-12">
+            <div className="row mb-2 mt-5">
+                <div className="col-7 mb-4" align="center">
+                
+            <div className="row" >
+            <img src="./content/cookie.png" width="50" height="50" className="img-fluid " />
+            <p className="mr-4"> Galleta Nuez </p>
+            <img src="./content/galletaNuez.png" width="50" height="50" className="img-fluid" />
+            <p className="mr-4"> Galleta Chispas </p>
+            <img src="./content/galletaMantequilla.png" width="50" height="50" className="img-fluid" />
+            <p> Galleta Mantequilla </p>
+
+            </div>
+            <div className="row mt-4" >
+            <img src="./content/galletaAlmendras.png" width="50" height="50" className="img-fluid " />
+            <p className="mr-4"> Galleta Almendras </p>
+            <img src="./content/galletaConfeti.png" width="50" height="50" className="img-fluid" />
+            <p className="mr-4"> Galleta Confeti </p>
+            <img src="./content/galletaChocolateNegro.png" width="50" height="50" className="img-fluid" />
+            <p> Galleta Chocolate Negro</p>
+
+            </div>
                 </div>
-                <div class="col-5" id="tablePedidos">
-                    <table class="table table-hover" >
+
+                <div className="col-5" id="tablePedidos">
+                    <table className="table table-hover" >
                         <thead >
                             <tr>
                                 <th>Cantidad</th>
@@ -27,88 +42,84 @@ export const Venta=()=> {
                 </div>
 
             </div>
-            <div class="row mb-3">
-                <div class="col-7">
-                    <div class="row mb-3">
-                        <h1 > Tipo Venta </h1>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="txtCantidad" class="form-label">Cantidad</label>
-                                <input type="number" id="txtCantidad" class="form-control"/>
-                            </div>
-                            <div class="col">
-                                <label for="txtPrecioUso" class="form-label">Peso:</label>
-                                <select class="form-select" aria-label="PESO" id="lstPeso">
+            <div className="row  ">
+                <div className="col-7 ">
+                <h3 className="d-flex justify-content-center  "> Tipo Venta </h3>
+                <div className="row" >
+                       
+                        <div className="col-4">
+                        <label for="txtCantidad" className="form-label">Cantidad</label>
+                        <input type="number" id="txtCantidad" className="form-control"/>
+                        <label for="txtPrecio">Precio</label>
+                                <input type="text" id="txtPrecio" className="form-control"/>
+
+                        </div>
+                        <div className="col-4">
+                        <label for="txtPrecioUso" className="form-label">Peso:</label>
+                                <select className="form-select" aria-label="PESO" id="lstPeso">
                                     <option selected>Selecciona el peso</option>
                                     <option value="KG">Kilogramos</option>
                                     <option value="GR">Gramos</option>
                                 </select>
-                            </div>
-                            <div class="col">
-                                <label for="txtPrecioUso" class="form-label">Paquete:</label>
-                                <select class="form-select" aria-label="PESO" id="lstPeso">
+                                <button type="button" className="btn btn-light mt-5">
+                                    UNIDAD</button>
+                        
+                        </div>
+                        <div className="col-4">
+                        <label for="txtPrecioUso" className="form-label">Paquete:</label>
+                                <select className="form-select" aria-label="PESO" id="lstPeso">
                                     <option selected>Selecciona el paquete</option>
                                     <option value="KG">1 KG</option>
                                     <option value="medio">1/2 KG</option>
                                 </select>
-                            </div>
-
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="txtPrecio">Precio</label>
-                                <input type="text" id="txtPrecio" class="form-control"/>
-                            </div>
-                            <div class="col">
-                                <br/>
-                                <button type="button" class="btn btn-light">
-                                    UNIDAD</button>
-                            </div>
-                            <div class="col"><br/>
-                                <button type="button" class="btn btn-light">
+                                <button type="button" className="btn btn-light mt-5">
                                     PRECIO</button>
-                            </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col"></div>
-                            <div class="col" ><button type="button" class="btn btn-success"
-                                   > AGREGAR +</button></div>
-                            <div class="col"></div>
-                        </div>
-                    </div>
+
+
                 </div>
-                <div class="col-2">
-                    <div class="row mb-3">
+                <div className="row   d-flex justify-content-center mt-4" >
+                <button type="button" className="btn btn-success"> AGREGAR</button>
+                </div>
+                </div>
+
+                <div className="col-2">
+                    <div className="row mb-3">
                         <label for="txtSubtotal" >Subtotal</label>
                     </div>
-                    <div class="row mb-3">
+                    <div className="row mb-3">
                         <label for="txtDescuento" >Descuento</label>
                         
                     </div>
-                    <div class="row mb-3">
+                    <div className="row mb-3">
                         <label for="txtTotal"  >Total</label>
                     
                     </div>
-                    <div class="row">
-                        <button type="button" class="btn btn-danger" > CANCELAR</button>
-                    </div>
+                    
+               
                 </div>
-                <div class="col-3" >
-                    <div class="row mb-3">
-                       <input type="text" id="txtSubtotal" class="form-control"/>
+                <div className="col-3" >
+                    <div className="row mb-3">
+                       <input type="text" id="txtSubtotal" className="form-control"/>
                     </div>
-                    <div class="row mb-3">
-                        <input type="number" id="txtDescuento" class="form-control"/>
+                    <div className="row mb-3">
+                        <input type="number" id="txtDescuento" className="form-control"/>
                     </div>
-                    <div class="row mb-3">
-                        <input type="text" id="txtTotal" class="form-control"/>
+                    <div className="row mb-3">
+                        <input type="text" id="txtTotal" className="form-control"/>
                     </div>
-                    <div class="row" >
-                        <button type="button" class="btn btn-success" > VENDER</button>
+                    <div className="row" >
+                        <button type="button" className="btn btn-success mr-2" > VENDER</button>
+                        <button type="button" className="btn btn-danger" > CANCELAR</button>
                     </div>
+                    
+                    
                 </div>
+                
             </div>
+            
         </div>
+        
 
     </div>
     )}

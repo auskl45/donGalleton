@@ -105,9 +105,9 @@ class Inventario extends React.Component {
     return (
       <>
         <Container>
-        <div className="card-header" align="center"><h1 >Inventario</h1></div>
+        <div className="card-header" align="center"><h1 >INVENTARIO</h1></div>
         <br />
-          <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Crear</Button>
+          <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Agregar Producto</Button>
           <br />
           <br />
           <Table striped bordered hover variant="dark">
@@ -253,7 +253,7 @@ class Inventario extends React.Component {
 
           <ModalFooter>
             <Button
-              color="primary"
+              color="success"
               onClick={() => this.insertar()}
             >
               Insertar

@@ -21,9 +21,9 @@ const goVenta = () => {
     navigate('/ganancia')
    };
     return (
-        <div className="container "  >
+        <div className="container mt-2 "  >
          <div className='row d-flex justify-content-center' >
-         <h5 className='mr-4 pe-none' style={{cursor:'pointer'}}onClick={goHome}> Home</h5>
+         <h5 className='mr-4 pe-none' style={{cursor:'pointer'}}onClick={goHome}> Inicio</h5>
            <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goVenta}> Venta</h5>
            <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goCocina}> Cocina</h5>
            <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goInventario}> Inventario</h5>
