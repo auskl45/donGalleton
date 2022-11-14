@@ -12,12 +12,12 @@ import {
 } from "reactstrap";
 
 const data = [
-  { id: 1, personaje: "Naruto", anime: "Naruto" },
-  { id: 2, personaje: "Goku", anime: "Dragon Ball" },
-  { id: 3, personaje: "Kenshin Himura", anime: "Rurouni Kenshin" },
-  { id: 4, personaje: "Monkey D. Luffy", anime: "One Piece" },
-  { id: 5, personaje: "Edward Elric", anime: "Fullmetal Alchemist: Brotherhood"},
-  { id: 6, personaje: "Seto Kaiba", anime: "Yu-Gi-Oh!" },
+  { id: 1, nombre: "Harina", cantidad: "8", tipoUnidad: "kg" },
+  { id: 2, nombre: "Leche", cantidad: "5", tipoUnidad: "litros" },
+  { id: 3, nombre: "levadura", cantidad: "2", tipoUnidad: "kg" },
+  { id: 4, nombre: "Chocolate", cantidad: "1", tipoUnidad: "kg"},
+  { id: 5, nombre: "Azucar", cantidad: "3", tipoUnidad: "kg"},
+
 ];
 
 class Inventario extends React.Component {
@@ -27,8 +27,9 @@ class Inventario extends React.Component {
     modalInsertar: false,
     form: {
       id: "",
-      personaje: "",
-      anime: "",
+      nombre: "",
+      cantidad: "",
+      tipoUnidad: "",
     },
   };
 
@@ -58,8 +59,9 @@ class Inventario extends React.Component {
     var arreglo = this.state.data;
     arreglo.map((registro) => {
       if (dato.id === registro.id) {
-        arreglo[contador].personaje = dato.personaje;
-        arreglo[contador].anime = dato.anime;
+        arreglo[contador].nombre = dato.nombre;
+        arreglo[contador].cantidad = dato.cantidad;
+        arreglo[contador].tipoUnidad = dato.tipoUnidad;
       }
       contador++;
     });
@@ -103,17 +105,19 @@ class Inventario extends React.Component {
     return (
       <>
         <Container>
+        <div className="card-header" align="center"><h1 >Inventario</h1></div>
         <br />
           <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Crear</Button>
           <br />
           <br />
-          <Table>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Personaje</th>
-                <th>Anime</th>
-                <th>Acción</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Tipo de unidad</th>
+                <th>Acciones</th>
               </tr>
             </thead>
 
@@ -121,8 +125,9 @@ class Inventario extends React.Component {
               {this.state.data.map((dato) => (
                 <tr key={dato.id}>
                   <td>{dato.id}</td>
-                  <td>{dato.personaje}</td>
-                  <td>{dato.anime}</td>
+                  <td>{dato.nombre}</td>
+                  <td>{dato.cantidad}</td>
+                  <td>{dato.tipoUnidad}</td>
                   <td>
                     <Button
                       color="primary"
@@ -159,27 +164,27 @@ class Inventario extends React.Component {
             
             <FormGroup>
               <label>
-                Personaje: 
+                nombre: 
               </label>
               <input
                 className="form-control"
-                name="personaje"
+                name="nombre"
                 type="text"
                 onChange={this.handleChange}
-                value={this.state.form.personaje}
+                value={this.state.form.nombre}
               />
             </FormGroup>
             
             <FormGroup>
               <label>
-                Anime: 
+                cantidad: 
               </label>
               <input
                 className="form-control"
-                name="anime"
+                name="cantidad"
                 type="text"
                 onChange={this.handleChange}
-                value={this.state.form.anime}
+                value={this.state.form.cantidad}
               />
             </FormGroup>
           </ModalBody>
@@ -204,7 +209,7 @@ class Inventario extends React.Component {
 
         <Modal isOpen={this.state.modalInsertar}>
           <ModalHeader>
-           <div><h3>Insertar Personaje</h3></div>
+           <div><h3>Insertar nombre</h3></div>
           </ModalHeader>
 
           <ModalBody>
@@ -223,11 +228,11 @@ class Inventario extends React.Component {
             
             <FormGroup>
               <label>
-                Personaje: 
+                nombre: 
               </label>
               <input
                 className="form-control"
-                name="personaje"
+                name="nombre"
                 type="text"
                 onChange={this.handleChange}
               />
@@ -235,11 +240,11 @@ class Inventario extends React.Component {
             
             <FormGroup>
               <label>
-                Anime: 
+                cantidad: 
               </label>
               <input
                 className="form-control"
-                name="anime"
+                name="cantidad"
                 type="text"
                 onChange={this.handleChange}
               />

@@ -23,8 +23,8 @@ export const Merma=()=> {
     return (
  <div className="container mt-3">
 
-<div className="card" align="center"><h1 >Registrar Merma</h1></div>
-        <div className="row  mt-5" align="center" >  
+<div className="card-header" align="center"><h1 >Registrar Merma</h1></div>       
+ <div className="row  mt-5" align="center" >  
         <div className="col-6">
         <input type="number" class="form-control" id="inputMerma" placeholder="Cantidad"/>
         </div>
