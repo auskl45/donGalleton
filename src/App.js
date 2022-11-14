@@ -5,7 +5,8 @@ import {Home} from './components/Home';
 import {Venta} from './components/venta/Venta';
 import {Cocina} from './components/cocina/Cocina';
 import {Ganancia} from './components/ganancia/Ganancia';
-import {Inventario} from './components/inventario/Inventario';
+import Inventario from './components/inventario/Inventario';
+import {Merma} from './components/cocina/Merma';
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
     <Route path="/" element={<Home navigateProps={useNavigate} />} />
     <Route path="/venta" element={<Venta />} />
     <Route path="/cocina" element={<Cocina />} />
+    <Route path="/cocina/merma" element={<Merma />} />
     <Route path="/ganancia" element={<Ganancia />} />
     <Route path="/inventario" element={<Inventario />} />
   </Routes>
