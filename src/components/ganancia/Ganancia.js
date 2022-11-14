@@ -1,4 +1,14 @@
+import Swal from 'sweetalert2'
+
 export const Ganancia=()=> {
+    const generarReporte = () => {
+        Swal.fire(
+            'Exito!',
+            'Reporte Generado!',
+            'success'
+          )
+          }
+   
     return (
 <div className="container mt-3">
 <div className="card-header" align="center"><h1 >GANANCIA</h1></div>
@@ -39,7 +49,7 @@ export const Ganancia=()=> {
         <input placeholder="Select date" type="text" id="prefill-example" class="form-control"/>
             <i class="fas fa-calendar input-prefix"  ></i>
         </div>
-        <button  class='btn btn-success mt-5' name="btnGenerarReporte" id='' >Generar Reporte </button>
+        <button  class='btn btn-success mt-5' name="btnGenerarReporte" id='' onClick={generarReporte} >Generar Reporte </button>
         </div>
     </div>
 </div>
