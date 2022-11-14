@@ -1,4 +1,9 @@
-export const Cocina=()=> {
+export const Cocina=(props)=> {
+    
+    let usenavigate=props.navigateProps()
+const goMerma = () => {
+   usenavigate('/cocina/merma')
+  };
     return (
         <div className="container">
         <div className="card-header" align="center"><h1 >COCINA</h1></div>
@@ -28,8 +33,28 @@ export const Cocina=()=> {
                 </div>
 
                 <div className="col-5" id="tablePedidos">
-                   
-                   
+                <h5>Receta</h5>
+                   <div className="row mt-4" > 
+                   <div className="col-6" >
+                      <img src="./content/book.png" width="50" height="50" className="img-fluid" />
+                    </div>
+                    <div className="col-6" >
+                    <button type="button" className="btn btn-success"> Cocinar</button>
+                    </div>
+                    </div>
+                    <h3 className="mt-5">Galletas requeridas</h3>
+                    <div className="row mt-4" > 
+                   <div className="col-6" >
+                      <img src="./content/book.png" width="50" height="50" className="img-fluid" />
+                    </div>
+                    <div className="col-6 " >
+                    <input id="" type="text"  class="form-control"  placeholder="Cantidad" readonly/>
+                    
+                    <button type="button" className="btn btn-danger mt-4 " onClick={goMerma}> Registrar Merma</button>
+                    </div>
+                    
+                    </div>
+
                 </div>
 
             </div>

@@ -14,7 +14,7 @@ export const App = () => {
     <Routes>
     <Route path="/" element={<Home navigateProps={useNavigate} />} />
     <Route path="/venta" element={<Venta />} />
-    <Route path="/cocina" element={<Cocina />} />
+    <Route path="/cocina" element={<Cocina  navigateProps={useNavigate}  />} />
     <Route path="/cocina/merma" element={<Merma />} />
     <Route path="/ganancia" element={<Ganancia />} />
     <Route path="/inventario" element={<Inventario />} />
