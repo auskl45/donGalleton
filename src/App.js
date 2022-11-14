@@ -7,6 +7,7 @@ import {Cocina} from './components/cocina/Cocina';
 import {Ganancia} from './components/ganancia/Ganancia';
 import Inventario from './components/inventario/Inventario';
 import {Merma} from './components/cocina/Merma';
+import {NavBar} from './components/NavBar';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
     <Route path="/cocina/merma" element={<Merma />} />
     <Route path="/ganancia" element={<Ganancia />} />
     <Route path="/inventario" element={<Inventario />} />
+    <Route path="/" element={<NavBar  />} />
   </Routes>
   );
 };

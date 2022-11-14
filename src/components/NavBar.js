@@ -1,28 +1,34 @@
+import React from 'react';
+
+import {useNavigate} from 'react-router-dom';
+
 export const NavBar=()=> {
+    const navigate = useNavigate();
+
+const goVenta = () => {
+   navigate('/venta')
+  };
+  const goHome = () => {
+    navigate('/')
+   };
+   const goCocina = () => {
+    navigate('/cocina')
+   };
+   const goInventario = () => {
+    navigate('/inventario')
+   };
+   const goGanancia = () => {
+    navigate('/ganancia')
+   };
     return (
         <div className="container "  >
-
-            <nav className="navbar navbar-expand-lg navbar-light ">
-  <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul className="navbar-nav">
-    <li className="nav-item ">
-        <a className="nav-link" href="#/">Home <span className="sr-only">(current)</span></a>
-      </li>
-      <li className="nav-item ">
-        <a className="nav-link" href="#/">Venta <span className="sr-only">(current)</span></a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#/">Cocina</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#/">Inventario</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#/">Ganancia</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+         <div className='row d-flex justify-content-center' >
+         <h5 className='mr-4 pe-none' style={{cursor:'pointer'}}onClick={goHome}> Home</h5>
+           <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goVenta}> Venta</h5>
+           <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goCocina}> Cocina</h5>
+           <h5 className='mr-4 ' style={{cursor:'pointer'}} onClick={goInventario}> Inventario</h5>
+           <h5  onClick={goGanancia} style={{cursor:'pointer'}}> Ganancia</h5>
+           </div>
         </div>
     )
 }
