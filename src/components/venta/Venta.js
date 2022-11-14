@@ -1,3 +1,23 @@
+import Swal from 'sweetalert2'
+const vender = () => {
+    Swal.fire({
+        title: '¿Desea registrar la venta?',
+        //text: "3 kg de Oreo",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, registrar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Exito !',
+           'Venta registrada correctamente.',
+          'success'
+          )
+        }
+      })
+   };
 export const Venta=()=> {
     return (
     <div className="container">
@@ -79,7 +99,7 @@ export const Venta=()=> {
 
                 </div>
                 <div className="row   d-flex justify-content-center mt-4" >
-                <button type="button" className="btn btn-success"> AGREGAR</button>
+                <button type="button" className="btn btn-success" onClick={vender}> AGREGAR</button>
                 </div>
                 </div>
 
@@ -109,7 +129,7 @@ export const Venta=()=> {
                         <input type="text" id="txtTotal" className="form-control"/>
                     </div>
                     <div className="row" >
-                        <button type="button" className="btn btn-success mr-2" > VENDER</button>
+                        <button type="button" className="btn btn-success mr-2" onClick={vender} > VENDER</button>
                         <button type="button" className="btn btn-danger" > CANCELAR</button>
                     </div>
                     

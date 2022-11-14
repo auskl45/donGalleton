@@ -22,7 +22,7 @@ const goVenta = () => {
 
 <div className="container  ">
 
-<div className="card-header" align="center"><h2 >TIENDA DON GALLETON</h2></div>
+<div className="card-header" align="center"><h2>TIENDA DON GALLETON</h2></div>
     <div className="row  mt-5" align="center" >  
         <div className="col-6">
            <img src="./content/cookie.png" onClick={goVenta} alt="venta" width="150" height="150"/>
